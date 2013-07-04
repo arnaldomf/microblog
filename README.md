@@ -14,3 +14,5 @@ Flask Tutorial from http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-
     $ flask/bin/pip install flask-wtf
     $ flask/bin/pip install flask-babel
     $ flask/bin/pip install flup
+    $ flask/bin/pip uninstall sqlalchemy
+    $ flask/bin/pip install sqlalchemy==0.7.9
