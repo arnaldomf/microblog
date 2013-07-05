@@ -1,3 +1,5 @@
 app.db
 *pyc
 flask/
+tmp/*
+db_repository/*
