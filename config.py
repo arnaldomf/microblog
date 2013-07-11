@@ -13,11 +13,24 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
-MAIL_SERVER = "mx.freeddom.com"
+# MAIL
+# MAIL_SERVER = "mx.####.com"
+# MAIL_PORT = 25
+# MAIL_USERNAME = None
+# MAIL_PASSWORD = None
+# ADMINS = ["arnaldo@#####.com"]
+
+MAIL_SERVER = 'smtp.#####.com'
 MAIL_PORT = 25
-MAIL_USERNAME = None
-MAIL_PASSWORD = None
-ADMINS = ["arnaldo@freeddom.com"]
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
+MAIL_USERNAME = 'arnaldo'
+MAIL_PASSWORD = '####'
+
+# administrator list
+ADMINS = ['arnaldo@####.com']
+
+
 POSTS_PER_PAGE = 3
 # text search
 WHOOSH_BASE = os.path.join(basedir, 'search.db')

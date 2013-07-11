@@ -1,6 +1,7 @@
 import os
 from flask.ext.login import LoginManager
 from flask.ext.openid import OpenID
+from flask.ext.mail import Mail
 from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 
 
@@ -35,6 +36,6 @@ if not app.debug:
 	app.logger.setLevel(logging.INFO)
 	app.logger.info('microblog startup')
 
-
+mail = Mail(app)
 
 from app import views, models
