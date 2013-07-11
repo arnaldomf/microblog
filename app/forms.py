@@ -24,3 +24,9 @@ class EditForm(Form):
 			self.nickname.errors.append('This nickname is in use. Please choose another one')
 			return False
 		return True
+
+class PostForm(Form):
+	post = TextField('post', validators = [Required()])
+
+class SearchForm(Form):
+	search  = TextField('search', validators = [Required()])
