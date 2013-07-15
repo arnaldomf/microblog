@@ -17,12 +17,12 @@ function set_openid(openid, pr) {
 	{{form.hidden_tag()}}
 	<p>
 		Please enter your OpenID or select one of the providers below:<br>
-		{{form.openid(size=80)}}<br>
+		{{form.openid(size=300)}}<br>
 		{% for error in form.errors.openid %}
 		<span style="color: red;">[{{error}}]</span>
 		{% endfor %}<br>
 		{% for pr in providers %}
-		<a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');">{{pr.name}}</a> |
+		<a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');"><img src="/static/img/{{pr.name.lower()}}.png" class="img-polaroid"></a>
 		{% endfor %}
 	</p>
 	<p>{{form.remember_me}} Remember Me</p>
