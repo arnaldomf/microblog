@@ -18,3 +18,6 @@ Flask Tutorial from http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-
     $ flask/bin/pip install sqlalchemy==0.7.9
 In config.py, put the result of os.urandom(24) in the place of your SECRET_KEY variable
     $ git checkout HEAD README.md
+    $ flask/bin/pybabel extract -F babel.cfg -o messages.pot app
+    $ flask/bin/pybabel init -i messages.pot -d app/translations -l es
+es = language
